@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol SettingsViewControllerDelegate: class {
+    func dataChanged()
+}
+
 class SettingsViewController: UIViewController {
+    
+    weak var delegate: SettingsViewControllerDelegate?
     
     var shouldShowPlutoSwitch: UISwitch!
 
@@ -28,6 +34,7 @@ class SettingsViewController: UIViewController {
     @objc func changeShouldShowPluto(_ sender: UISwitch) {
         let userDefaults = UserDefaults.standard
         userDefaults.set(sender.isOn, forKey: .shouldShowPlutoKey)
+        delegate?.dataChanged()
     }
     
     @objc func done() {

@@ -34,8 +34,18 @@ class PlanetsCollectionViewController: UICollectionViewController {
         return cell
     }
 
-    // MARK: - Action Handlers
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowSettings",
+            let settingsVC = segue.destination as? SettingsViewController {
+            
+            settingsVC.delegate = self
+        }
+    }
     
-    @IBAction func unwindToPlanetsCollectionViewController(_ sender: UIStoryboardSegue) {
+}
+
+extension PlanetsCollectionViewController: SettingsViewControllerDelegate {
+    func dataChanged() {
+        collectionView.reloadData()
     }
 }

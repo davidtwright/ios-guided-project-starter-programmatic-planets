@@ -56,7 +56,7 @@
                     <navigationItem key="navigationItem" title="Our Planets" largeTitleDisplayMode="always" id="9jM-sB-bMt">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="o7s-0t-nle">
                             <connections>
-                                <segue destination="hh8-Na-WHi" kind="presentation" modalPresentationStyle="fullScreen" id="44y-sZ-JDe"/>
+                                <segue destination="hh8-Na-WHi" kind="presentation" identifier="ShowSettings" id="44y-sZ-JDe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -70,7 +70,7 @@
             <objects>
                 <viewController id="hh8-Na-WHi" customClass="SettingsViewController" customModule="ProgrammaticPlanets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tP3-3z-RpX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="r2k-xg-HT1"/>
